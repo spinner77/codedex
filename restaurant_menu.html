@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JOOD</title>
+        <header>
+            <img id="header-img" alt="Restaurant sign 'Jood'" src="https://www.joodrestaurant.com/wp-content/uploads/2024/09/jood-logo-new-206x68.jpg" width="400">
+            <h1><b>Welcome to Jood</b></h1>
+            <br><br>
+            <hr style="border: 1px solid black;">
+        </header>  
+        <nav>
+            <h2><a href="#menu">Menu</a></h2>
+            <h2><a href="#order-form">Order Form</a></h2> 
+        </nav>
+        <br><br>
+        <hr style="width: 95%">
+    </head>
+    <body>
+        <main>
+            <section id="menu">
+                <h2>Menu</h2>
+                <article>
+                    <img alt="pumpkin soup" src="https://www.joodrestaurant.com/wp-content/uploads/2024/10/jood-pumpkin-soup.jpg">
+                    <h3>Pumpkin Soup</h3>
+                    <p>Silky carrot and pumpkin soup with roasted pumpkin seeds, crispy red onions, black sesame, chili flakes, and a swirl of cream, served with garlic bread.
+                        <br>
+                       <i>£5</i>
+                    </p>
+                </article>
+                <br><br>
+                <article>
+                    <img alt="Greek Platter" src="https://www.joodrestaurant.com/wp-content/uploads/2024/10/jood-greek-plttr-chkn.jpg">
+                    <h3>Greek Platter</h3>
+                    <p>A Mediterranean feast featuring your choice of meat on warm garlic Greek naan bread, served with tzatziki, hummus, grilled lemon wedges, garlic sauce and a vibrant Greek salad.
+                        <br><br>   
+                        Classic Platter (perfect for a light meal):
+                        <br>
+                        Souvlaki Chicken - <i>£9.50</i> or
+                        <br>
+                        Home-made Kofta - <i>£10</i>
+                        <br><br>
+                        Grand Platter (for those with a hearty appetite):
+                        <br>
+                        Souvlaki Chicken - <i>£11</i> or
+                        <br>
+                        Home-made Kofta - <i>£12</i>
+                        <br><br>
+                        * Grand Platter Includes a larger portion of meat, more Greek naan, and a side of crispy fries</p>
+                </article>
+                <br><br>
+                <article>
+                    <img alt="Oriental Loaded Box" src="https://www.joodrestaurant.com/wp-content/uploads/2024/10/jood-loaded-box.jpg">
+                    <h3>Oriental Loaded Box</h3>
+                    <p>Grilled chicken fillet on rice, topped with teriyaki sauce, pickled vegetables, half-boiled egg, cucumber, chilli, coriander, spring onions, wasabi mayo, and sesame seeds.
+                        <br>
+                        <i>£10</i></p>
+                </article>
+            </section>
+            <hr style="width: 95%">
+            <br><br>
+            <section id="order-form">
+                <h2>Place Your Order</h2>
+                <form>
+                    <label>Pumpkin Soup:</label><input type="number" id="pumpkin-soup" name="pumpkin-soup" min="0" placeholder="Choose how many">
+                    <br><br>
+                    <label>Greek Platter:</label><input type="number" id="greek-platter" name="greek-platter" min="0" placeholder="Choose how many">
+                    <br>
+                    <label>Souvlaki Chicken, Classic Platter</label><input type="radio" id="souvlaki-chicken" name="classic-platter" value="Souvlaki Chicken, Classic Platter">
+                    <label>Home-made Kofta, Classic Platter</label><input type="radio" id="home-made-kofta" name="classic-platter" value="Home-made Kofta, Classic Platter">
+                    <br>
+                    <label>Souvlaki Chicken Grand Platter</label><input type="radio" id="souvlaki-chicken" name="grand-platter" value="Souvlaki Chicken, Grand Platter">
+                    <label>Home-made Kofta, Grand Platter</label><input type="radio" id="home-made-kofta" name="grand-platter" value="Home-made Kofta, Grand Platter">
+                    <br><br>
+                    <label>Oriental Loaded Box:</label><input type="number" id="oriental-loaded-box" name="oriental-loaded-box" min="0" placeholder="Choose how many">
+                    <br><br>
+                    <textarea id="special-requests" name="special-requests" placeholder="Special Requests"></textarea>
+                    <br><br>
+                    <input type="submit" value="Go To Checkout">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <hr style="border: 1px solid black;">
+            <p>Made with love by Spinner 77</p>
+        </footer>
+    </body>
