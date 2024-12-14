@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'ITC Machine';
+    src: url('ITC-Machine-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}   
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: #3230a6;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Styles for Sidebar Bevelled Border */
+aside {
+  border-style: outset; /* Set the border style to outset */
+  border-width: 5px; /* Adjust thickness as needed */
+  border-color: #808080 #C0C0C0 #C0C0C0 #808080; /* Top, Right, Bottom, Left - Creates the bevelled effect */
+  background-color: #FFD700;
+  padding: 20px;
+  width: 250px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 20px;
+}
+
+/* Style for the sidebar items */
+
+aside nav ul {
+list-style-type: none;
+padding: 0;
+}
+
+/* CSS for the Search Bar */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px; /* Space between search bar and categories */
+  border: 2px inset #808080; /* Windows 98 style inset border */
+  background-color: #C0C0C0;
+  padding: 2px;
+  width: 80%; /* Ensures the search bar takes up the full width of its container */
+  box-sizing: border-box; /* Important: includes padding and border in the element's total width and height */
+}
+
+.search-input {
+  flex-grow: 1; /* Input takes up available space */
+  border: none;
+  padding: 5px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  box-sizing: border-box; /* Include padding in width calculation */
+  width: calc(100% - 50px); /* Subtract button width + a little extra for spacing */
+}
+
+.search-button {
+  border: 2px outset #808080; /* Windows 98 style outset border */
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  background-color: #C0C0C0;
+  box-sizing: border-box; /* Include padding in width calculation */
+  width: 40px; /* Explicit width for the button */
+  margin-left: 2px;
+}
+/* Styles for Category Headings */
+/* Styles for Section Headings */
+aside h3 {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px; /* Add padding around the text */
+  background-color: #3230a6; /* Dark blue background */
+  color: white; /* White text */
+  border: 2px outset #808080; /* Outset border for 3D effect */
+  text-align: left;
+}
+
+
+/* Style for the sidebar list items (categories) */
+aside nav ul li {
+  margin-bottom: 5px; /* Space between list items */
+  list-style-type: none;
+  text-decoration: underline;
+}
+
+aside nav ul li a {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Style for the flashing GIFs */
+
+.flashing-gif {
+width: 30px; /* Adjust width to fit the sidebar */
+height: auto; /* Maintain aspect ratio */
+margin-left: 10px; /* Space between the text and the GIF */
+}
+
+/* Style for the Contact Section */
+.contact-section {
+  margin-top: 20px; /* Space between browse and contact sections */
+  padding: 10px;
+}
+
+.contact-section p {
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.2; /* Improve line spacing */
+  margin: 5px 0; /* Adjust margins */
+  text-align: left;
+}
+
+.spinning-email {
+  display: block; /* To center the image */
+  margin: 10px auto; /* Center the image */
+  width: 50px; /* Adjust size as needed */
+}
+
+main {
+  grid-area: main;
+  background-color: #3230a6;
+  padding: 20px;
+  height: 100%; /* Ensure main content spans the full height */
+}
+
+.new-releases {
+  background-color: #3230a6;
+  padding: 15px;
+  border: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .staff-picks {
+  background-color: #3230a6;
+  padding: 15px;
+  border: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-releases h2, .staff-picks h2 {
+  background-color: #3230a6;
+  color: #FFD700;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.movies-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px; /* Space between images */
+}
+
+.movie {
+  flex: 1 1 22%; /* Each movie takes up ~22% of the row */
+  text-align: center;
+}
+
+.movie img:first-of-type {
+  width: 100%;
+  height: auto;
+  border: 5px solid #FFD700; /* Bright yellow border */
+  box-shadow: 5px 5px 0px #000000; /* Dark blue shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie img:first-of-type:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 8px 8px 0px #3230a6; /* Enhanced shadow on hover */
+}
+
+.movie {
+  position: relative; /* Ensures .play-button is positioned relative to .movie */
+  display: inline-block; /* Prevents layout issues */
+}
+
+.movie .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px; /* Adjust the size as needed */
+  cursor: pointer;
+}
+
+.movie-title {
+  font-family: 'ITC Machine', Arial, sans-serif;
+  color: #FFD700; /* Bright yellow */
+  font-weight: bold;
+  text-align: center; /* Center the text */
+  margin-top: 10px; /* Space between image and title */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.staff-picks {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border: 2px solid #ccc;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #3230a6;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#visitor-count {
+  background-color: #c0c0c0; /* Windows 97 grey background */
+  padding: 10px 20px; /* Some padding for the text */
+  border: 2px solid #808080; /* Light grey border */
+  border-radius: 4px; /* Slightly rounded corners */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
+  font-family: 'Arial', sans-serif; /* Windows 97-like font */
+  font-weight: bold; /* Make the text bold */
+  display: inline-block; /* Make the element fit the content */
+}
+
+
+#logo {
+  box-sizing: border-box;
+  width: 200px;
+  float: left;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFD700;
+  border: 2px solid #3230a6;
+  min-width: 160px;
+  box-shadow: 4px 4px 0px #000;
+  z-index: 1;
+  font-family: 'ITC Machine', Arial, sans-serif;
+}
+
+.dropdown-content a {
+  color: #3230a6;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  background-color: #3230a6;
+  color: #FFD700;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.vhs-button {
+  height: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+/* Styles for the loading overlay */
+      #loading-overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+          z-index: 1000; /* Ensure it's on top of everything */
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+      }
+
+      #loading-popup {
+          background-color: #C0C0C0; /* Windows 98 grey */
+          border: 2px solid #808080;
+          padding: 20px;
+          width: 300px;
+          text-align: center;
+          box-shadow: 4px 4px 0px #000;
+      }
+
+      #progress-bar {
+          width: 100%;
+          height: 20px;
+          background-color: white;
+          border: 1px solid black;
+      }
+
+      #progress-bar-fill {
+          height: 100%;
+          width: 0%;
+          background-color: blue; /* Or any other color you prefer */
+      }
