@@ -40,6 +40,7 @@ aside {
   padding-top: 20px;
   position: sticky;
   top: 0;
+  overflow-y: auto
 }
 
 /* Style for the sidebar items */
