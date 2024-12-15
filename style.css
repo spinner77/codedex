@@ -1,11 +1,11 @@
-@font-face {
+@font-face { /* Import the ITC Machine font */
     font-family: 'ITC Machine';
     src: url('ITC-Machine-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 }   
 
-body {
+body { /* Set the body styles */
   margin: 0;
   font-family: Arial, sans-serif;
   display: grid;
@@ -13,12 +13,12 @@ body {
     "header header"
     "sidebar main"
     "footer footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto; /* Header, main content, footer */
   grid-template-columns: 200px 1fr;
   height: 100vh;
 }
-
-header {
+/* Set the header styles */
+header { 
   grid-area: header;
   background-color: #3230a6;
   color: white;
@@ -169,7 +169,7 @@ margin-left: 10px; /* Space between the text and the GIF */
   margin: 10px auto; /* Center the image */
   width: 50px; /* Adjust size as needed */
 }
-
+ /* Set the main content styles */
 main {
   grid-area: main;
   background-color: #3230a6;
@@ -177,6 +177,7 @@ main {
   height: 100%; /* Ensure main content spans the full height */
 }
 
+/* Styles for the new releases section */
 .new-releases {
   background-color: #3230a6;
   padding: 15px;
@@ -186,6 +187,7 @@ main {
   align-items: center;
 }
 
+/* Styles for the staff picks section */
 main .staff-picks {
   background-color: #3230a6;
   padding: 15px;
