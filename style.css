@@ -1,13 +1,7 @@
-@font-face { /* Import the ITC Machine font */
-    font-family: 'ITC Machine';
-    src: url('ITC-Machine-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}   
 
 body { /* Set the body styles */
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   display: grid;
   grid-template-areas: 
     "header header"
@@ -38,7 +32,7 @@ header {
   display: inline-block; /* Allows for horizontal movement */
   padding-left: 100%; /* Start off-screen */
   animation: scrollText 15s linear infinite; /* Animation settings */
-  font-family: 'ITC Machine', Arial, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 2em;
   color: #FFD700;
   text-shadow: 2px 2px 4px #000000;
@@ -157,7 +151,7 @@ margin-left: 10px; /* Space between the text and the GIF */
 }
 
 .contact-section p {
-  font-family: Arial, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 0.9em;
   line-height: 1.2; /* Improve line spacing */
   margin: 5px 0; /* Adjust margins */
@@ -281,7 +275,7 @@ main .staff-picks {
 }
 
 .movie-title {
-  font-family: 'ITC Machine', Arial, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   color: #FFD700; /* Bright yellow */
   font-weight: bold;
   text-align: center; /* Center the text */
@@ -335,7 +329,7 @@ footer {
   min-width: 160px;
   box-shadow: 4px 4px 0px #000;
   z-index: 1;
-  font-family: 'ITC Machine', Arial, sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .dropdown-content a {
@@ -373,37 +367,37 @@ footer {
 }
 
 /* Styles for the loading overlay */
-      #loading-overlay {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-          z-index: 1000; /* Ensure it's on top of everything */
-          justify-content: center; /* Center horizontally */
-          align-items: center; /* Center vertically */
-      }
+#loading-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 1000; /* Ensure it's on top of everything */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
 
-      #loading-popup {
-          background-color: #C0C0C0; /* Windows 98 grey */
-          border: 2px solid #808080;
-          padding: 20px;
-          width: 300px;
-          text-align: center;
-          box-shadow: 4px 4px 0px #000;
-      }
+#loading-popup {
+  background-color: #C0C0C0; /* Windows 98 grey */
+  border: 2px solid #808080;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 4px 4px 0px #000;
+}
 
-      #progress-bar {
-          width: 100%;
-          height: 20px;
-          background-color: white;
-          border: 1px solid black;
-      }
+#progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
 
-      #progress-bar-fill {
-          height: 100%;
-          width: 0%;
-          background-color: blue; /* Or any other color you prefer */
-      }
+#progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: blue; /* Or any other color you prefer */
+}
