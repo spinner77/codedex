@@ -176,6 +176,39 @@ main .staff-picks {
   justify-content: space-between;
   width: 100%;
   gap: 20px; /* Space between images */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding-bottom: 10px; /* Space for the scrollbar */
+}
+
+/* Styling the scrollbar (Webkit browsers like Chrome and Safari) */
+.movies-row::-webkit-scrollbar {
+  height: 10px; /* Height of the scrollbar */
+}
+
+.movies-row::-webkit-scrollbar-track {
+  background: #c0c0c0; /* Windows 98 grey background */
+  border: 1px solid #808080;
+  box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080;
+}
+
+.movies-row::-webkit-scrollbar-thumb {
+  background: #c0c0c0; /* Windows 98 grey background */
+  border: 1px solid #808080;
+  box-shadow: 1px 1px #ffffff, -1px -1px #808080;
+}
+
+/* Styling the scrollbar for Firefox */
+.movies-row {
+  scrollbar-color: #c0c0c0 #808080; /* thumb track */
+}
+
+.movie {
+  flex: 0 0 auto; /* Prevent movies from shrinking or growing */
+  width: 200px; /* Set a fixed width for each movie */
+  margin-right: 20px; /* Add space between movies */
+}
+.movie:last-child {
+  margin-right: 0; /* Remove margin from last movie */
 }
 
 .movie {
