@@ -8,11 +8,11 @@
   </head>
   <body>
     <header>
-      <img src="assets\blockflix_logo.png" id="logo"> //Blockflix Logo
+      <img src="assets\blockflix_logo.png" id="logo"> <!-- Blockflix Logo -->
     <div>
-      <div class="dropdown"> //Dropdown menu
-        <img src="assets\tape1.png" alt="VHS Tape Button" class="vhs-button"> //VHS Tape Button
-        <div class="dropdown-content"> //Dropdown content
+      <div class="dropdown"> <!--Dropdown menu -->
+        <img src="assets\tape1.png" alt="VHS Tape Button" class="vhs-button"> <!-- VHS Tape Button -->
+        <div class="dropdown-content"> <!-- Dropdown content -->
           <a href="#">My Account</a>
           <a href="#">My Downloads</a>
           <a href="#">Returns</a>
@@ -38,7 +38,7 @@
         <div class="dropdown-label">Terms and Conditions</div>
       </div>
     </div>
-    <div class="scrolling-text-container"> //Scrolling text hero bar
+    <div class="scrolling-text-container"> <!--Scrolling text hero bar -->
       <div class="scrolling-text">
         <span>Welcome to Blockflix Welcome to Blockflix Welcome to Blockflix Welcome to Blockflix Welcome to Blockflix Welcome to Blockflix</span>
       </div>
@@ -49,26 +49,26 @@
 
 <aside> //Sidebar
   <h3>Search</h3>
-  //Search bar and button
+  <!--Search bar and button -->
     <div class="search-bar"> 
         <input type="text" placeholder="Search..." class="search-input">
         <button class="search-button">Go</button>
     </div>
-    //Browse header and browse list
+    <!--Browse header and browse list -->
     <nav>
         <h3>Browse</h3>
         <ul>
             <li class="sidebar-item">
                 <a href="#" style="color: black; text-decoration: none;">Home</a>
-                <img class="flashing-gif" src="assets\Belovedhome.gif" alt="Home gif"> //home gif
+                <img class="flashing-gif" src="assets\Belovedhome.gif" alt="Home gif"> <!-- home gif -->
             </li>
             <li class="sidebar-item">
                 <a href="#" style="color: black; text-decoration: none;">New Releases</a>
-                <img class="flashing-gif" src="assets\giphy.gif" alt="New gif"> //new gif
+                <img class="flashing-gif" src="assets\giphy.gif" alt="New gif"> <!--new gif -->
             </li>
             <li class="sidebar-item">
                 <a href="#" style="color: black; text-decoration: none;">Staff Picks</a>
-                <img class="flashing-gif" src="assets\ren-and-stimpy-heart.gif" alt="Ren heart"> //ren and stimpy gif
+                <img class="flashing-gif" src="assets\ren-and-stimpy-heart.gif" alt="Ren heart"> <!--ren and stimpy gif -->
             </li>
             <li><a href="#">Action</a></li>
             <li><a href="#">Comedy</a></li>
@@ -81,7 +81,7 @@
             <li><a href="#">Documentary</a></li>
             </ul>
     </nav>
-    //Contact section  
+    <!--Contact section  -->
     <div class="contact-section">
     <h3>Contact Us</h3>
       <p>Blockflix Video<br>
@@ -98,7 +98,7 @@
 </aside>
   //Main section
   <main>
-    <section class="new-releases"> //New releases section - these are actually the hottest movies on Netflix currently
+    <section class="new-releases"> <!--New releases section - these are actually the hottest movies on Netflix currently -->
       <h2>Check out this weeks hottest movies!</h2>
       <div class="movies-row">
         <div class="movie">
@@ -142,7 +142,7 @@
         </div> 
       </div>  
     </section>
-    <section class="staff-picks"> //Staff picks section - these are a collection of my favourite 90's movies
+    <section class="staff-picks"> <!--Staff picks section - these are a collection of my favourite 90's movies -->
       <h2>Staff Top Picks</h2>
       <div class="movies-row">
         <div class="movie">
@@ -186,7 +186,7 @@
         </div>
       </div>  
     </section>
-    //popup, activated on pressing the play button, with dialup sound and a joke 4 month download time, which is the actual time it would take using 90's 56mps dialup and a 4k movie
+    <!--popup, activated on pressing the play button, with dialup sound and a joke 4 month download time, which is the actual time it would take using 90's 56mps dialup and a 4k movie -->
     <div id="loading-overlay">
         <div id="loading-popup">
             <p>Downloading...</p>
@@ -201,7 +201,7 @@
         <source src="assets\dial-up-modem-01.mp3" type="audio/mpeg">
     </audio>
 
-    <script> //script to play the dialup sound and show the popup
+    <script> // script to play the dialup sound and show the popup
         const dialupSound = document.getElementById('dialup-sound');
         const loadingOverlay = document.getElementById('loading-overlay');
         const progressBarFill = document.getElementById('progress-bar-fill');
@@ -215,7 +215,7 @@
 
                 let progress = 0;
                 const interval = setInterval(() => {
-                    progress += 1; // Adjust increment for speed
+                    progress += 1; // Adjust increment for speed 
                     progressBarFill.style.width = progress + '%';
                     if (progress >= 100) {
                         clearInterval(interval);
@@ -234,11 +234,11 @@
   </main>
 
   <footer>
-    <p>© 1996 Blockflix Video/ spinner77. All Rights Reserved.</p> //date appropriate copyright
+    <p>© 1996 Blockflix Video/ spinner77. All Rights Reserved.</p> <!-- date appropriate copyright -->
     <p id="visitor-count">Visitor #0</p>
     </footer>
 
-    <script>//script to count visitors
+    <script>// script to count visitors
         // Check if visitor count is already stored in localStorage
         if (localStorage.getItem('visitorCount') === null) {
             // If not, initialize it to 1
