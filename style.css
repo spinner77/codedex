@@ -181,8 +181,9 @@ main .staff-picks {
 }
 
 .movie img:first-of-type {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 300px;
+  object-fit: cover; /* Prevents images from stretching */
   border: 5px solid #FFD700; /* Bright yellow border */
   box-shadow: 5px 5px 0px #000000; /* Dark blue shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
