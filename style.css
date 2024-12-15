@@ -38,6 +38,8 @@ aside {
   box-sizing: border-box;
   height: 100%;
   padding-top: 20px;
+  position: sticky;
+  top: 0;
 }
 
 /* Style for the sidebar items */
